@@ -16,7 +16,7 @@ body{
   a:hover{
     color: pink;
   }
-  
+
   h1{
     font-weight: 300;
   }
@@ -32,10 +32,9 @@ nav {
     align-content: center;
   }
 
-  h1{
-    font-weight: 300;
-  }
-
+  p{
+  line-height: 1.8;
+}
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
