@@ -17,9 +17,52 @@ body{
     color: pink;
   }
   
+  h1{
+    font-weight: 300;
+  }
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3vw;
+}
+  nav a {
+    margin-left: 2vw;
+  }
   img {
     align-content: center;
   }
 
+  h1{
+    font-weight: 300;
+  }
 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1fr; 
+    align-content: center; 
+    gap: 10px;
+    height: 100vh; /* or any height you need */
+}
+
+.img1, .img2, .img3 {
+    width: 85%; /* Adjust this as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area */
+}
+
+.img1 {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2;
+}
+
+.img2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.img3 {
+    grid-column: 3 / 4; 
+    grid-row: 1 / 2;
+}
 
