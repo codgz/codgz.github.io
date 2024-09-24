@@ -1,6 +1,6 @@
 body{
-    background-color: rgb(5, 4, 34);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
     font-family: "Epilogue", sans-serif;
   }
   
@@ -8,61 +8,75 @@ body{
     align-content: center;
   }
   
+
   a{
     text-decoration: none;
-    color: white;
+    color: black;
   }
   
   a:hover{
-    color: pink;
+    color: grey;
   }
+  
 
-  h1{
-    font-weight: 300;
-  }
-nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 3vw;
-}
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 3vw 2vw 0vw 0vw;
+    }
+
   nav a {
     margin-left: 2vw;
   }
+
+  
+  h1{
+    font-weight: 300;
+    margin-left: 3vw;
+  }
+
+
   img {
     align-content: center;
-    border-radius: 0 0 40px 0 ;
+
   }
 
   p{
-  line-height: 1.8;
+  line-height: 1.8vw;
+  font-size: 12pt;
+  width: 80% ;
+  margin-top: 20vw;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: end;
 }
+
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: 1fr; 
     align-content: center; 
     gap: 10px;
     height: 100vh; /* or any height you need */
 }
 
-.img1, .img2, .img3 {
-    width: 85%; /* Adjust this as needed */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images cover the area */
-}
 
 .img1 {
     grid-column: 1 / 2; 
     grid-row: 1 / 2;
+    width: 85%; /* Adjust this as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area */
+    margin-left: 3vw;
+    
 }
 
-.img2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+.position{
+  text-align: right;
+  font-size: 15pt;
+  margin-top: -10vw -5vw 0vw 0vw;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
 }
-
-.img3 {
-    grid-column: 3 / 4; 
-    grid-row: 1 / 2;
-}
-

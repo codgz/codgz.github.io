@@ -1,6 +1,6 @@
 body{
-    background-color: rgb(5, 4, 34);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
     font-family: "Epilogue", sans-serif;
   }
   
@@ -10,22 +10,24 @@ body{
   
   a{
     text-decoration: none;
-    color: white;
+    color: black;
   }
   
   a:hover{
-    color: pink;
+    color: grey;
   }
   
   h1{
     font-weight: 300;
+    margin-left: 3vw;
   }
-nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 3vw;
-  
-}
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3vw;
+    margin-right: 2vw;
+    }
+
   nav a {
     margin-left: 2vw;
   }
