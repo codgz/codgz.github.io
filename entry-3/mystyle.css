@@ -24,14 +24,19 @@ body{
   nav {
     display: flex;
     justify-content: flex-end;
-    margin-top: 3vw;
-    margin-right: 2vw;
-    text-transform: uppercase;
-    }
-    
+    margin: 3vw 2vw 0vw 0vw;
+    text-transform: lowercase;
+  
+  }
+  
   nav a {
     margin-left: 2vw;
+    border-radius: 30px;
+    border: 1px solid black; 
+    padding: 10px 15px 10px 15px;
+    font-size: 9pt;
   }
+
   img {
     align-content: center;
   }
