@@ -26,6 +26,7 @@ body{
     justify-content: flex-end;
     margin-top: 3vw;
     margin-right: 2vw;
+    text-transform: uppercase;
     }
     
   nav a {
@@ -45,30 +46,84 @@ body{
     height: 100vh; /* or any height you need */
 }
 
-.img1, .img2, .img3, .img4 {
-    width: 30%; /* Adjust this as needed */
+.img1, .img2, .img3, .img4, .img5, .img6,.img7,.img8,.img9,.img10,.img11,.img12 {
+    width: 18%; /* Adjust this as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure images cover the area */
 }
 
 .img1 {
   position:absolute;
-  left: 10vw;
+  left: 4vw;
 }
 
 .img2 {
     position: absolute;
-   right: 20px;
+   right: 5vw;
 }
 
 .img3 {
   position: absolute;
-  right: 150px;
+  right: 3vw;
   top: 30vw;
 }
 
 .img4 {
   position: absolute;
-  left: 300px;
+  left: 3vw;
+  top: 30vw;
+}
+
+.img5 {
+  width: 15%;
+  position: absolute;
+  left: 20vw;
   top: 35vw;
 }
+
+.img6 {
+  width: 15%;
+  position: absolute;
+  right: 20vw;
+  top: 10vw;
+}
+
+.img7 {
+  position:absolute;
+  left: 20vw;
+  top: 13vw;
+}
+
+.img8 {
+  position: absolute;
+  left: 50vw;
+  top: 20vw;
+}
+
+.img9 {
+  position: absolute;
+  left: 35vw;
+  top: 5vw;
+}
+
+.img10 {
+  position: absolute;
+  right: 45vw;
+  top: 33vw;
+}
+
+.img11 {
+  width: 15%;
+  position: absolute;
+  right: 32vw;
+  top: 3vw;
+}
+
+.img12 {
+  position: absolute;
+  right: 18vw;
+  top: 35vw;
+} 
+
+
+

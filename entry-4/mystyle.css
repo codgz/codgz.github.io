@@ -1,0 +1,94 @@
+body{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-family: "Epilogue", sans-serif;
+}
+
+header {
+  align-content: center;
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: grey;
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3vw 2vw 0vw 0vw;
+  text-transform: uppercase;
+  }
+
+nav a {
+  margin-left: 2vw;
+}
+
+
+h1{
+  font-weight: 300;
+  margin-left: 3vw;
+}
+
+
+img {
+  align-content: center;
+
+}
+
+p{
+line-height: 1.8vw;
+font-size: 12pt;
+width: 80% ;
+margin-top: 6vw;
+grid-column: 2 / 3;
+grid-row: 1 / 2;
+
+}
+.english{
+font-size: 12pt;
+
+}
+
+.french{
+font-style: italic;
+font-size: 11pt;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: 1fr; 
+  align-content: center; 
+  gap: 10px;
+  height: 100vh; /* or any height you need */
+}
+
+
+.img1 {
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2;
+  width: 670px;
+  height: 670px;
+  object-fit: cover; /* Ensure images cover the area */
+  margin-left: 3vw;
+  
+}
+
+.position{
+text-align: right;
+font-size: 15pt;
+margin: -5vw -5vw 0vw 0vw;
+grid-column: 2 / 3;
+grid-row: 1 / 2;
+font-family: "Montserrat", sans-serif;
+width: 100%;
+}
+
+

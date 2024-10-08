@@ -19,13 +19,15 @@ body{
   
   h1{
     font-weight: 300;
-    margin-left: 3vw;
+    margin: 8vw 0 3vw 3vw;
+
   }
   nav {
     display: flex;
     justify-content: flex-end;
     margin-top: 3vw;
     margin-right: 2vw;
+    text-transform: uppercase;
     }
 
   nav a {
@@ -34,13 +36,25 @@ body{
 
 p{
   line-height: 1.8;
+  margin-left: 3vw;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
 }
 
-.ol{
-  line-height: 1.5;
-  grid-column: 2 / 3; 
-  grid-row: 1 / 2;
+.english{
+  font-size: 12pt;
+  grid-column: 1 / 2; 
+  
 }
+
+.french{
+  font-style: italic;
+  font-size: 11pt;
+  grid-column: 2 / 3; 
+  margin: 0 5px 0 0;
+}
+
 
 
 img{
@@ -58,3 +72,18 @@ img{
   height: 100vh; /* or any height you need */
 }
 
+.list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5px 0 0 0;
+}
+
+.C01{
+  grid-column: 1 / 2; 
+  padding: 10px 0 0 0;
+}
+
+.C02{
+  grid-column: 2 / 3; 
+  padding: 10px 0 0 0;
+}

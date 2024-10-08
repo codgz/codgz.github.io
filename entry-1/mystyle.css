@@ -23,6 +23,7 @@ body{
     display: flex;
     justify-content: flex-end;
     margin: 3vw 2vw 0vw 0vw;
+    text-transform: uppercase;
     }
 
   nav a {
@@ -45,10 +46,19 @@ body{
   line-height: 1.8vw;
   font-size: 12pt;
   width: 80% ;
-  margin-top: 20vw;
+  margin-top: 6vw;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  align-self: end;
+ 
+}
+.english{
+  font-size: 12pt;
+  
+}
+
+.french{
+  font-style: italic;
+  font-size: 11pt;
 }
 
   .grid {
@@ -64,8 +74,8 @@ body{
 .img1 {
     grid-column: 1 / 2; 
     grid-row: 1 / 2;
-    width: 85%; /* Adjust this as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 670px;
+    height: 670px;
     object-fit: cover; /* Ensure images cover the area */
     margin-left: 3vw;
     
@@ -74,9 +84,11 @@ body{
 .position{
   text-align: right;
   font-size: 15pt;
-  margin-top: -10vw -5vw 0vw 0vw;
+  margin: -5vw -5vw 0vw 0vw;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   font-family: "Montserrat", sans-serif;
   width: 100%;
 }
+
+
