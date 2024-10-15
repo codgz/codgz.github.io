@@ -16,6 +16,7 @@ body{
   
   a:hover{
     color: grey;
+  
   }
   
 
@@ -24,10 +25,11 @@ body{
     justify-content: flex-end;
     margin: 3vw 2vw 0vw 0vw;
     text-transform: lowercase;
-  
+    /*position: fixed; **/
   }
   
   nav a {
+    display: flex;
     margin-left: 2vw;
     border-radius: 30px;
     border: 1px solid black; 
