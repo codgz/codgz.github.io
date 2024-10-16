@@ -16,7 +16,7 @@ body{
     height: 550px;
     background: radial-gradient(circle at center, rgba(255, 179, 2, 0.6) 0%, rgba(255, 179, 2, 0.6) 100%);
     border-radius: 50%; 
-    animation: zoom-in-zoom-out 3s ease-in-out infinite, smoothColorTransition 12s ease-in-out infinite;
+    animation: zoom-in-zoom-out 2s ease-in-out infinite, smoothColorTransition 12s ease-in-out infinite;
     filter: blur(30px);
     transform: translate(-50%, -50%);
     opacity: 0.3; 

@@ -53,7 +53,7 @@ body{
   margin-top: 6vw;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
- 
+  padding: 0 0 0 17px; 
 }
 .english{
   font-size: 12pt;
