@@ -174,3 +174,23 @@ p {
   justify-content: center;
 }
 
+/* Style for the language toggle button */
+#toggleLanguage {
+  margin-left: 0.6rem; /* 2vw to rem */
+  border-radius: 1.875rem; /* 30px to rem */
+  border: 0.0625rem solid black; /* 1px to rem */
+  padding: 0.625rem 0.9375rem; /* 10px 15px to rem */
+  font-size: 0.7rem; /* 9pt to rem (9pt = 12px = 0.75rem) */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+#toggleLanguage:hover {
+  color: rgb(176, 176, 176); /* Darker shade on hover */
+}
+
+/* Change background color on focus */
+#toggleLanguage:focus {
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 0 2px grey(0, 123, 255, 0.5); /* Add a subtle shadow */
+}
