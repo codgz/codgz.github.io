@@ -1,0 +1,198 @@
+html {
+  font-size: 1rem; /* 16px */
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-family: "Epilogue", sans-serif;
+}
+
+header {
+  align-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.875rem 0.125rem 0 0; /* 3vw and 2vw to rem */
+  text-transform: lowercase;
+}
+
+nav a {
+  margin-left: 0.6rem; /* 2vw to rem */
+  border-radius: 1.875rem; /* 30px to rem */
+  border: 0.0625rem solid black; /* 1px to rem */
+  padding: 0.625rem 0.9375rem; /* 10px 15px to rem */
+  font-size: 0.7rem; /* 9pt to rem (9pt = 12px = 0.75rem) */
+}
+
+h1 {
+  font-weight: 300;
+  margin-left: 1.875rem; /* 3vw to rem */
+}
+
+img {
+  align-content: center;
+}
+
+p {
+  line-height: 1.3rem; /* 1.8vw to rem (assuming 1vw = 16px) */
+  font-size: 0.80rem; /* 12pt to rem (12pt = 16px = 1rem) */
+  width: 80%;
+  margin-top: 1.875rem; /* 6vw to rem */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: 0 0 0 1.0625rem; /* 17px to rem */
+}
+
+.english {
+  font-size: 0.90rem; /* 12pt to rem */
+  margin: 0 0 0 0;
+  padding: 1rem 0 0 0;
+}
+
+.french {
+  font-style: italic;
+  font-size: 0.90rem; /* 11pt to rem (11pt = 14.67px = 0.9167rem) */
+  padding: 1rem 0 0 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-content: center;
+  gap: 0.625rem; /* 10px to rem */
+  height: 100vh; 
+}
+
+.img1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 41.875rem; /* 670px to rem */
+  max-width: 100%;
+  height: 41.875rem; /* 670px to rem */
+  object-fit: cover; 
+  margin-left: 1.875rem; /* 3vw to rem */
+}
+
+.position {
+  text-align: right;
+  font-size: 0.9375rem; /* 15pt to rem (15pt = 20px = 1.25rem) */
+  margin: -1rem -1rem 0 0;  /* -5vw to rem */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  
+}
+
+
+
+@media (max-width: 768px) {
+
+  html{
+    font-size: 14px; /* 16px */
+  }
+
+  body {
+    background-color: rgb(240, 240, 240);
+  }
+
+  nav {
+    margin: 1rem 0.5rem; 
+  }
+
+  nav a {
+    margin-left: 0.5rem; 
+    padding: 0.5rem 0.75rem; 
+    font-size: 0.5rem; 
+  }
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 1.5rem; 
+  }
+
+  p {
+    line-height: 1.5rem; 
+    font-size: 0.6875rem; 
+    margin-top: 1rem; 
+    padding: 0 0 0 1rem; 
+  }
+
+  .grid {
+    grid-template-columns: 1fr; 
+    gap: 0.5rem; 
+  }
+
+  .img1 {
+    width: 100%; 
+    height: auto; 
+    margin-left: 0; 
+  }
+
+  .position {
+    font-size: 0.8125rem; 
+    margin: -1rem -1rem 0 0; 
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  html{
+    font-size: 12px; /* 16px */
+
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .grid {
+    display: block; 
+    grid-template-columns: 1fr; 
+    grid-gap: 1rem;
+  }
+
+  .grid-item {
+    width: 100%; 
+  }
+}
+
+.img1{
+  width: 100%;
+  margin-left: -1.875rem;
+  justify-content: center;
+}
+
+/* Style for the language toggle button */
+#toggleLanguage {
+  margin-left: 0.6rem; /* 2vw to rem */
+  border-radius: 1.875rem; /* 30px to rem */
+  border: 0.0625rem solid black; /* 1px to rem */
+  padding: 0.625rem 0.9375rem; /* 10px 15px to rem */
+  font-size: 0.7rem; /* 9pt to rem (9pt = 12px = 0.75rem) */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+#toggleLanguage:hover {
+  color: rgb(176, 176, 176); /* Darker shade on hover */
+}
+
+/* Change background color on focus */
+#toggleLanguage:focus {
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 0 2px grey(0, 123, 255, 0.5); /* Add a subtle shadow */
+}

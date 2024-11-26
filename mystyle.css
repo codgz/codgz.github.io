@@ -20,6 +20,7 @@ body{
     filter: blur(30px);
     transform: translate(-50%, -50%);
     opacity: 0.3; 
+    z-index: -999;
 }
 
 @keyframes zoom-in-zoom-out {
