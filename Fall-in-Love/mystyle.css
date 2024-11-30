@@ -56,13 +56,20 @@ p {
 }
 
 .english {
-  font-size: 0.80rem; /* 12pt to rem */
-  margin: 0 0 0 0;
+  font-size: 0.90rem; /* 12pt to rem */
+  margin: 3rem 2rem 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1.3rem;
 }
 
 .french {
   font-style: italic;
-  font-size: 0.80rem; /* 11pt to rem (11pt = 14.67px = 0.9167rem) */
+  font-size: 0.90rem; /* 11pt to rem (11pt = 14.67px = 0.9167rem) */
+  margin: 3rem 2rem 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1.3rem;
 }
 
 .grid {
@@ -93,15 +100,6 @@ p {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   
-}
-
-.insta {
-  text-align: right;
-  font-size: 1.125rem; /* 15pt to rem */
-  margin: -22.5rem 0 0 0; 
-  grid-column: 2 / 3;
-  font-family: "Montserrat", sans-serif;
-  width: 100%;
 }
 
 
@@ -139,7 +137,7 @@ p {
   }
 
   .grid {
-    grid-template-columns: 1fr; 
+    display: block;
     gap: 0.5rem; 
   }
 
@@ -168,8 +166,7 @@ p {
 
   .grid {
     display: block; 
-    grid-template-columns: 1fr; 
-    grid-gap: 1rem;
+
   }
 
   .grid-item {
@@ -181,4 +178,25 @@ p {
   width: 100%;
   margin-left: -1.875rem;
   justify-content: center;
+}
+
+/* Style for the language toggle button */
+#toggleLanguage {
+  margin-left: 0.6rem; /* 2vw to rem */
+  border-radius: 1.875rem; /* 30px to rem */
+  border: 0.0625rem solid black; /* 1px to rem */
+  padding: 0.625rem 0.9375rem; /* 10px 15px to rem */
+  font-size: 0.7rem; /* 9pt to rem (9pt = 12px = 0.75rem) */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+#toggleLanguage:hover {
+  color: rgb(176, 176, 176); /* Darker shade on hover */
+}
+
+/* Change background color on focus */
+#toggleLanguage:focus {
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 0 2px grey(0, 123, 255, 0.5); /* Add a subtle shadow */
 }

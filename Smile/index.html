@@ -1,86 +1,121 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NY Messages</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NY Messages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Modal styles */
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #modalImage {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html"> collection </a>
+        <a href="../images/index.html"> images </a>
+        <a href="../about/index.html"> about </a>
+        <button id="toggleLanguage">Switch to French</button>
+    </nav>
+    
+    <h1>The power of a simple smile </h1>
 
-        
-        <link rel="stylesheet" href="mystyle.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-                                    <!--<script src="" async defer></script>-->
-
-        
-        <nav>
-            <a href="../index.html"> collection </a>
-            <a href="../images/index.html"> images </a>
-            <a href="../about/index.html"> about </a>
-        </nav>
-        
-              <h1>  The power of a simple smile  </h1>
-        
-        
-        
-  
-
-        <main>
-            
-            
-            <div class="grid">
-                <img src="Smile.jpg" class="img1"/>
-               
-                <div class="position">
+    <main>
+        <div class="grid">
+            <img src="Smile.jpg" class="img1" id="mainImage" style="cursor:pointer;"/>
+            <div class="position">
                 <a href="https://www.google.com/maps/place/40°43'47.5%22N+73°59'34.8%22W/@40.7298611,-73.9955749,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7298611!4d-73.993?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"> 
-                <p>> 40.72986° N, 73.99299° W</p></a>
-                </div>
-
-             
-            <p> 
-                <span class="english">
-                    In a world often overshadowed by chaos and noise, a simple smile has the power to illuminate even the darkest moments. 
+                    <p>> 40.72986° N, 73.99299° W</p>
+                </a>
+            </div>
+            <p>
+                <div class="english" id="englishText"> In a world often overshadowed by chaos and noise, a simple smile has the power to illuminate even the darkest moments. 
                     It is a universal language that transcends barriers and connects us to one another, reminding us that we are not alone. 
                     Just as a ray of sunshine breaks through the clouds, your smile can brighten someone’s day, inspire kindness, and foster connections in unexpected places. 
                     Never underestimate the ripple effect of a small gesture; 
-                    your smile might be the spark that transforms someone’s life, one day at a time.
-                </span>
-                <br>
-                <br>
-                <span class="french"> Dans un monde souvent assombri par le chaos et le bruit, un simple sourire a le pouvoir d'illuminer même les moments les plus sombres. 
+                    your smile might be the spark that transforms someone’s life, one day at a time.</div>
+                <div class="french" id="frenchText" style="display:none;">Dans un monde souvent assombri par le chaos et le bruit, un simple sourire a le pouvoir d'illuminer même les moments les plus sombres. 
                     C'est un langage universel qui transcende les barrières et nous relie les uns aux autres, nous rappelant que nous ne sommes pas seuls. 
                     Tout comme un rayon de soleil perce les nuages, votre sourire peut illuminer la journée de quelqu'un, inspirer de la gentillesse et favoriser des liens dans des endroits inattendus. 
-                    Ne sous-estimez jamais l'effet d'entraînement d'un petit geste ; votre sourire pourrait être l'étincelle qui transforme la vie de quelqu'un, un jour après l'autre.
-                    </span>
-            
+                    Ne sous-estimez jamais l'effet d'entraînement d'un petit geste ; votre sourire pourrait être l'étincelle qui transforme la vie de quelqu'un, un jour après l'autre.</div>
             </p>
-             
-        
-           
-            
-            
-            
-        </main>
+        </div>
+    </main>
+
+    <div id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Language toggle
+        const toggleButton = document.getElementById('toggleLanguage');
+        const englishText = document.getElementById('englishText');
+        const frenchText = document.getElementById('frenchText');
+
+        toggleButton.addEventListener('click', () => {
+            if (englishText.style.display === 'none') {
+                englishText.style.display = 'block';
+                frenchText.style.display = 'none';
+                toggleButton.textContent = 'Switch to French';
+            } else {
+                englishText.style.display = 'none';
+                frenchText.style.display = 'block';
+                toggleButton.textContent = 'Switch to English';
+            }
+        });
+
+        // Image modal
+        const mainImage = document.getElementById('mainImage');
+        const modal = document.getElementById('imageModal');
        
+                // Show modal when image is clicked
+                mainImage.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImage.src = mainImage.src; // Set the modal image to the clicked image
+        });
 
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-        
-    </body>
+        // Close the modal when clicking anywhere outside the image
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
-

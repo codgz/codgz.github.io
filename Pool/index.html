@@ -1,88 +1,121 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NY Messages</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NY Messages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Modal styles */
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #modalImage {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html"> collection </a>
+        <a href="../images/index.html"> images </a>
+        <a href="../about/index.html"> about </a>
+        <button id="toggleLanguage">Switch to French</button>
+    </nav>
+    
+    <h1>Pool</h1>
 
-        
-        <link rel="stylesheet" href="mystyle.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-                                    <!--<script src="" async defer></script>-->
-
-        
-        <nav>
-            <a href="../index.html"> collection </a>
-            <a href="../images/index.html"> images </a>
-            <a href="../about/index.html"> about </a>
-        </nav>
-        
-              <h1>  I'm at the pool  </h1>
-        
-        
-        
-  
-
-        <main>
-            
-            
-            <div class="grid">
-                <img src="Pool.jpg" class="img1"/>
-               
-                <div class="position">
+    <main>
+        <div class="grid">
+            <img src="Pool.jpg" class="img1" id="mainImage" style="cursor:pointer;"/>
+            <div class="position">
                 <a href="https://www.google.com/maps/place/40%C2%B044'06.5%22N+73%C2%B059'29.7%22W/@40.73513,-73.9941449,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.73513!4d-73.99157?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3D"> 
-                <p>> 40.73513° N, 73.99157° W</p></a>
-                </div>
-
-             
-            <p> 
-                <span class="english">
-                    Life often invites us to dive deeper than the surface. 
+                    <p>> 40.73513° N, 73.99157° W</p>
+                </a>
+            </div>
+            <p>
+                <div class="english" id="englishText">  Life often invites us to dive deeper than the surface. 
                     Just as the playful response “No, I'm at the pool” reminds us to enjoy the moment, 
                     we can find joy in the unexpected. Love may not always be the answer we're looking for, 
                     but connection and laughter can transform the ordinary into the extraordinary. 
-                    Let's cherish those delightful little encounters that remind us to live fully and joyfully, wherever we are.
-
-
-                </span>
-                <br>
-                <br>
-                <span class="french"> La vie nous invite souvent à plonger plus profondément que la surface. 
+                    Let's cherish those delightful little encounters that remind us to live fully and joyfully, wherever we are</div>
+                <div class="french" id="frenchText" style="display:none;">La vie nous invite souvent à plonger plus profondément que la surface. 
                     Tout comme la réponse ludique « Non, je suis à la piscine » nous rappelle de profiter du moment présent, nous pouvons trouver de la joie dans l'inattendu. 
                     L'amour n'est peut-être pas toujours la réponse que nous recherchons, mais la connexion et le rire peuvent transformer l'ordinaire en extraordinaire. 
-                    Chérissons ces petites rencontres délicieuses qui nous rappellent de vivre pleinement et joyeusement, où que nous soyons.
-                    </span>
-            
+                    Chérissons ces petites rencontres délicieuses qui nous rappellent de vivre pleinement et joyeusement, où que nous soyons.</div>
             </p>
-             
-        
-           
-            
-            
-            
-        </main>
+        </div>
+    </main>
+
+    <div id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Language toggle
+        const toggleButton = document.getElementById('toggleLanguage');
+        const englishText = document.getElementById('englishText');
+        const frenchText = document.getElementById('frenchText');
+
+        toggleButton.addEventListener('click', () => {
+            if (englishText.style.display === 'none') {
+                englishText.style.display = 'block';
+                frenchText.style.display = 'none';
+                toggleButton.textContent = 'Switch to French';
+            } else {
+                englishText.style.display = 'none';
+                frenchText.style.display = 'block';
+                toggleButton.textContent = 'Switch to English';
+            }
+        });
+
+        // Image modal
+        const mainImage = document.getElementById('mainImage');
+        const modal = document.getElementById('imageModal');
        
+                // Show modal when image is clicked
+                mainImage.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImage.src = mainImage.src; // Set the modal image to the clicked image
+        });
 
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-        
-    </body>
+        // Close the modal when clicking anywhere outside the image
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
-

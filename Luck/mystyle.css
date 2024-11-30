@@ -57,14 +57,19 @@ p {
 
 .english {
   font-size: 0.90rem; /* 12pt to rem */
-  margin: 0 0 0 0;
-  padding: 1rem 0 0 0;
+  margin: 3rem 2rem 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1.3rem;
 }
 
 .french {
   font-style: italic;
   font-size: 0.90rem; /* 11pt to rem (11pt = 14.67px = 0.9167rem) */
-  padding: 1rem 0 0 0;
+  margin: 3rem 2rem 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1.3rem;
 }
 
 .grid {
@@ -132,7 +137,7 @@ p {
   }
 
   .grid {
-    grid-template-columns: 1fr; 
+    display: block;
     gap: 0.5rem; 
   }
 
@@ -161,8 +166,7 @@ p {
 
   .grid {
     display: block; 
-    grid-template-columns: 1fr; 
-    grid-gap: 1rem;
+
   }
 
   .grid-item {

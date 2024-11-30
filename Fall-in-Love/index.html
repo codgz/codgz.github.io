@@ -1,90 +1,126 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NY Messages</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NY Messages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Modal styles */
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #modalImage {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html"> collection </a>
+        <a href="../images/index.html"> images </a>
+        <a href="../about/index.html"> about </a>
+        <button id="toggleLanguage">Switch to French</button>
+    </nav>
+    
+    <h1>  Falling for me ? </h1>
+
+    <main>
+
+        <div class="insta">
+            <a href="https://www.instagram.com/7soulsdeep/?hl=fr"> 
+            <p>> @7soulsdeep</p></a>
+        </div>
 
         
-        <link rel="stylesheet" href="mystyle.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-                                    <!--<script src="" async defer></script>-->
-
-        
-        <nav>
-            <a href="../index.html"> collection </a>
-            <a href="../images/index.html"> images </a>
-            <a href="../about/index.html"> about </a>
-        </nav>
-        
-              <h1>  Falling for me ?  </h1>
-        
-        
-        
-  
-
-        <main>
-            
-            
-            <div class="grid">
-                <img src="FallingLove.jpg" class="img1"/>
-               
-                <div class="position">
+        <div class="grid">
+            <img src="Climate.jpg" class="img1" id="mainImage" style="cursor:pointer;"/>
+            <div class="position">
                 <a href="https://www.google.com/maps/place/40%C2%B044'46.3%22N+73%C2%B059'18.5%22W/@40.7462,-73.9910349,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7462!4d-73.98846?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"> 
-                <p>> 40.74620° N, 73.98846° W</p></a>
-                </div>
-
-                <div class="insta">
-                    <a href="https://www.instagram.com/7soulsdeep/?hl=fr"> 
-                    <p>> @7soulsdeep</p></a>
-                </div>
-                
-                <p> 
-                <span class="english">
-                    As autumn paints the world in hues of gold and crimson, let your heart open to the beauty around you. 
+                    <p>> 40.74620° N, 73.98846° W</p>
+                </a>
+            </div>
+            <p>
+                <div class="english" id="englishText"> As autumn paints the world in hues of gold and crimson, let your heart open to the beauty around you. 
                     Just as leaves fall, so too can new connections blossom. Embrace the magic of this season—discover the unexpected messages waiting to inspire you and invite love to take root in your life. 
-                    This autumn, take a moment to pause, reflect, and let the whispers of strangers fill your soul with hope and warmth.
-
-                </span>
-                <br>
-                <br>
-                <span class="french"> Alors que l'automne peint le monde en teintes dorées et cramoisies, laissez votre cœur s'ouvrir à la beauté qui vous entoure. 
+                    This autumn, take a moment to pause, reflect, and let the whispers of strangers fill your soul with hope and warmth.</div>
+                <div class="french" id="frenchText" style="display:none;">Alors que l'automne peint le monde en teintes dorées et cramoisies, laissez votre cœur s'ouvrir à la beauté qui vous entoure. 
                     Tout comme les feuilles tombent, de nouvelles connexions peuvent s'épanouir. 
                     Embrassez la magie de cette saison et découvrez les messages inattendus qui vous inspirent et invitent l'amour à s'enraciner dans votre vie. 
-                    Cet automne, prenez le temps de vous arrêter, de réfléchir et de laisser les chuchotements des étrangers remplir votre âme d'espoir et de chaleur.                   
-                
-                </span>
-            
+                    Cet automne, prenez le temps de vous arrêter, de réfléchir et de laisser les chuchotements des étrangers remplir votre âme d'espoir et de chaleur.  </div>
             </p>
-             
-        
-           
-            
-            
-            
-        </main>
+        </div>
+    </main>
+
+    <div id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Language toggle
+        const toggleButton = document.getElementById('toggleLanguage');
+        const englishText = document.getElementById('englishText');
+        const frenchText = document.getElementById('frenchText');
+
+        toggleButton.addEventListener('click', () => {
+            if (englishText.style.display === 'none') {
+                englishText.style.display = 'block';
+                frenchText.style.display = 'none';
+                toggleButton.textContent = 'Switch to French';
+            } else {
+                englishText.style.display = 'none';
+                frenchText.style.display = 'block';
+                toggleButton.textContent = 'Switch to English';
+            }
+        });
+
+        // Image modal
+        const mainImage = document.getElementById('mainImage');
+        const modal = document.getElementById('imageModal');
        
+                // Show modal when image is clicked
+                mainImage.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImage.src = mainImage.src; // Set the modal image to the clicked image
+        });
 
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-        
-    </body>
+        // Close the modal when clicking anywhere outside the image
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
-
