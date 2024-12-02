@@ -25,7 +25,7 @@ body, html {
   animation: zoom-in-zoom-out 2s ease-in-out infinite, smoothColorTransition 12s ease-in-out infinite;
   filter: blur(30px);
   transform: translate(-50%, -50%);
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -999;
 }
 
@@ -58,7 +58,7 @@ a:hover {
 h1 {
   font-size: 2.5rem;
   font-weight: 300;
-  margin: 4rem 0 1rem;
+  margin: 4rem 0 1rem 1rem;
 }
 
 nav {
@@ -96,8 +96,14 @@ nav a {
 
 .french {
   font-style: italic;
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 2 /3 ;
+  grid-row: 1 / 2;
+}
+
+.english {
+  font-style: italic;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 img {
@@ -131,45 +137,26 @@ img {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Inherit color from parent element */
   display: block; /* Make the link a block-level element for easy click targets */
-  padding: 0.5rem; /* Add padding around links */
-  border-radius: 0.25rem; /* Slight rounding of corners */
-  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.list a:hover {
-  color: grey; /* Change color on hover */
-}
-
-.C01, .C02 {
-  padding: 0.625rem 0 0 0;
-}
-
-/* Media Query for Tablets and Smaller Devices */
+/* Media Query for Tablets */
 @media (max-width: 768px) {
   html {
-    font-size: 1.4rem;
-  }
-
-  main {
-    display: block;
-  }
-
-  body {
-    background-color: #f0f0f0;
+    font-size: 1.4rem; /* Adjust base font size for tablets */
   }
 
   nav {
-    flex-direction: column;
+    flex-direction: column; /* Stack navigation items */
     align-items: flex-start;
     margin: 1rem;
   }
 
   .hamburger {
-    display: block;
+    display: block; /* Show hamburger menu */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* Hide nav links by default */
     flex-direction: column;
     position: absolute;
     top: 3.75rem;
@@ -181,7 +168,7 @@ img {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* Show nav links when active */
   }
 
   nav a {
@@ -193,64 +180,66 @@ img {
   }
 
   h1 {
-    margin-left: 1rem;
-    font-size: 1.5rem;
+    margin-left: 1rem; /* Adjust margin for heading */
+    font-size: 1.8rem; /* Reduce font size */
   }
 
   .translation-container {
-    display: block;
-    font-size: 0.6875rem;
+    display: block; /* Stack translation containers */
+    font-size: 0.875rem; /* Adjust font size */
     margin-top: 1rem;
     padding-left: 1rem;
   }
 
   .list {
-    display: block;
-    font-size: 0.6875rem;
+    display: block; /* Stack list items */
+    font-size: 0.875rem; /* Adjust font size */
     gap: 0.5rem;
   }
 }
 
-/* Media Query for Small Mobile Devices */
-@media (max-width: 320px) {
+
+@media (max-width: 480px) {
   html {
-    font-size: 1rem;
-    width: 100%;
+    font-size: 1rem; /* Further reduce base font size for small devices */
   }
 
   .container {
-    width: 100%;
-    padding: 0;
+    width: 100%; /* Full width for containers */
+    padding: 0; /* Remove padding */
   }
 
   .translation-container {
-    width: 100%;
-    line-height: 1rem;
-    font-size: 0.6rem;
-    margin-top: 0.3rem;
+    width: 100%; /* Full width for translation container */
+    line-height: 1.2rem; /* Adjust line height */
+    font-size: 0.75rem; /* Further reduce font size */
+    margin-top: 0.5rem; /* Adjust margin */
     padding-left: 1rem;
   }
 
   .list {
-    font-size: 0.6rem;
-    overflow: visible;
-    padding-left: 1rem;
+    font-size: 0.75rem; /* Adjust font size */
+    overflow: visible; /* Allow overflow */
+    padding-left: 1rem; /* Adjust padding */
   }
 
   .list ul {
-    margin-left: 1rem;
-    list-style-type: none;
+    margin-left: 1rem; /* Adjust margin */
+    list-style-type: none; /* Remove bullet points */
   }
 
   .list a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    font-size: 0.6rem;
+    display: block; /* Ensure links are block elements */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+    font-size: 0.75rem; /* Adjust font size */
   }
 
-  .grid-item {
-    width: 100%;
+  h1 {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  .hamburger {
+    font-size: 1.5rem; /* Adjust size of hamburger icon */
   }
 }
-
