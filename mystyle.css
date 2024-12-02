@@ -140,7 +140,7 @@ img {
 @media (max-width: 768px) {
   html {
     font-size: 1.
-
+  }
   nav {
     flex-direction: column; /* Stack navigation items */
     align-items: flex-start;
