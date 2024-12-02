@@ -273,7 +273,7 @@ img{
 }
 .list ul {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 1rem;;
     list-style-type: none; /* Remove bullets if needed */
 }
 .list a {
