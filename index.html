@@ -28,10 +28,15 @@
 <div class="abstract-shape"></div>
         
         <nav>
-            <a href="index.html"> collection </a>
-            <a href="../codgz.github.io/images/index.html"> images </a>
-            <a href="../codgz.github.io/about/index.html"> about </a>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Collection</a>
+                <a href="../codgz.github.io/images/index.html">Images</a>
+                <a href="../codgz.github.io/about/index.html">About</a>
+            </div>
         </nav>
+
+
            
               <h1> New York's Messages </h1>
 
@@ -39,18 +44,20 @@
         <main>
             
             
-            <p> <span class="english"> Have you ever stumbled upon a note tucked under a park bench or a chalk drawing on the sidewalk that made you smile? 
+            <p> <div class="english"> Have you ever stumbled upon a note tucked under a park bench or a chalk drawing on the sidewalk that made you smile? 
                 You'll find spontaneous, heartfelt and sometimes bizarre messages found in the most unexpected places.
                 Document the stories behind these messages, whether scribbled on a scrap of paper, etched in concrete or whispered through art. 
                 Immerse yourself in a world of creativity and connection, and be inspired by the voices of strangers who leave their mark on the streets we all share.
                 
-                </span>
+            </div>
                 <br> 
-                <span class="french">Êtes-vous déjà tombé sur une note cachée sous un banc public ou sur un dessin à la craie sur le trottoir qui vous a fait sourire ?
+                <br>
+                <br>
+                <div class="french">Êtes-vous déjà tombé sur une note cachée sous un banc public ou sur un dessin à la craie sur le trottoir qui vous a fait sourire ?
                     Tu trouveras des messages spontanés, sincères et parfois bizarres que l'on trouve dans les endroits les plus inattendus.
                     Documenter les histoires qui se cachent derrière ces messages, qu'ils soient griffonnés sur un bout de papier, 
                     gravés dans le béton ou chuchotés à travers l'art. 
-                    Plongez dans un monde de créativité et de connexion, et laissez-vous inspirer par les voix d'inconnus qui laissent leurs traces dans les rues que nous partageons tous.</span>
+                    Plongez dans un monde de créativité et de connexion, et laissez-vous inspirer par les voix d'inconnus qui laissent leurs traces dans les rues que nous partageons tous.</div>
             </p>
         <div class="list">
             <div class="c01">
@@ -68,22 +75,22 @@
             </div>
         </div>
              
-              
-              
-
-            
-         
-            
-            
+             
         </main>
-       
 
-        <footer> 
-            
-            
-        </footer> 
 
+       <script>
+        document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
+});
+
+document.getElementById("nav-links").classList
+
+
+       </script>
         
     </body>
 </html>
+
 
