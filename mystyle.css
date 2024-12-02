@@ -137,7 +137,6 @@ img{
   grid-template-rows: 1fr; 
   align-content: center; 
   gap: 0.625rem; /* 10px = 0.625rem */
-  height: 100vh; /* No conversion needed */
 }
 
 .list{
