@@ -262,13 +262,13 @@ img{
   .translation-container {
       width: 100%;
       line-height: 1rem; /* Adjust line height */
-      font-size: 0.8rem; /* Adjust font size */
+      font-size: 0.6rem; /* Adjust font size */
       margin-top: 0.3rem; /* Adjust margin */
       padding: 0 0 0 1rem; /* Add padding */
   }
 
   .list {
-    font-size: 0.8rem; /* Adjust font size */
+    font-size: 0.6rem; /* Adjust font size */
     overflow: visible;
 }
 .list ul {
