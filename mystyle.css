@@ -7,7 +7,7 @@ body{
     color: black;
     font-family: "Epilogue", sans-serif;
   }
-  body, html {
+body, html {
     height: 100%;
     overflow: hidden; 
 }
@@ -76,14 +76,15 @@ body{
   }
   
   h1{
+    font-size: 2.5rem;
     font-weight: 300;
-    margin: 0.5rem 0 0.1875rem 0.1875rem;
+    margin: 4rem 0 0.1875rem 1rem;
 
   }
   nav {
     display: flex;
     justify-content: flex-end;
-    margin: 0.1875rem 0.125rem 0 0;
+    margin: 1rem 1rem 0 0;
     text-transform: lowercase;
   
   }
@@ -102,26 +103,27 @@ body{
     font-size: 0.5625rem; /* 9pt = 0.5625rem */
   }
 
-p{
-  line-height: 1.8;
-  margin-left: 0.1875rem; /* 3vw = 0.1875rem */
-  display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem; /* 30px = 1.875rem */
+.translation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  column-gap: 1.875rem; /* Adjust spacing between columns */
+  line-height: 1.8rem;
+  margin: 0 1rem 0 1rem; /* Adjust margins if necessary */
 }
 
-.english{
-  font-size: 0.75rem;
+.english {
+  font-size: 0.9rem;
   grid-column: 1 / 2; 
-  
 }
 
-.french{
+.french {
   font-style: italic;
-  font-size: 0.6875rem; /* 11pt = 0.6875rem */
+  font-size: 0.9rem; /* Slightly smaller */
+  margin: 0; /* Override any extra margin */
   grid-column: 2 / 3;
-  margin: 0 0.3125rem 0 0;
+  grid-row: 2 / 3; 
 }
+
 
 img{
   width: 80%;
@@ -141,7 +143,23 @@ img{
 .list{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0.3125rem 0 0 0;
+  margin: 0 0 0 1rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem; /* Space between links in each column */
+}
+
+.list a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Default color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.list a:hover {
+  color: grey; /* Change color on hover */
 }
 
 .C01{
@@ -162,7 +180,7 @@ img{
 @media (max-width: 768px) {
 
   html {
-    font-size: 0.875rem; /* Adjust base font size */
+    font-size: 1.40rem; /* Adjust base font size */
   }
 
   main{
@@ -215,7 +233,7 @@ img{
       font-size: 1.5rem; /* Adjust font size */
   }
 
-  p {
+  .translation-container {
     display: block;
       line-height: 1.5rem; /* Adjust line height */
       font-size: 0.6875rem; /* Adjust font size */
@@ -225,6 +243,7 @@ img{
 
   .list {
       display: block; /* Stack items vertically */
+      font-size: 0.6875rem;
       gap: 0.5rem; /* Add gap between items */
   }
 }
@@ -232,7 +251,7 @@ img{
 /* Media Query for Small Mobile Devices */
 @media (max-width: 320px) {
   html {
-    font-size: 1.15rem; 
+    font-size: 1.20rem; 
 
   }
 
@@ -241,17 +260,28 @@ img{
       padding: 0; /* Remove padding */
   }
 
-  p {
-      line-height: 1.5rem; /* Adjust line height */
-      font-size: 0.8rem; /* Adjust font size */
-      margin-top: 1rem; /* Adjust margin */
+  .translation-container {
+      width: 100%;
+      line-height: 1rem; /* Adjust line height */
+      font-size: 0.95rem; /* Adjust font size */
+      margin-top: 0.3rem; /* Adjust margin */
       padding: 0 0 0 1rem; /* Add padding */
   }
 
   .list {
-      display: block; /* Stack items vertically */
-  }
-
+    font-size: 0.8rem; /* Adjust font size */
+    overflow: visible;
+}
+.list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullets if needed */
+}
+.list a {
+    display: block; /* Ensure links are block-level for vertical stacking */
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
   .grid-item {
       width: 100%; /* Full width for grid items */
   }
