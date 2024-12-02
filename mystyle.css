@@ -88,15 +88,13 @@ nav a {
   column-gap: 1.875rem;
   line-height: 1.8rem;
   margin: 0 1rem;
+  font-size: 0.9rem; /* Consistent font size */
 }
 
-.english, .french {
-  font-size: 0.9rem;
-}
 
 .french {
   font-style: italic;
-  grid-column: 2 /3 ;
+  grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
@@ -123,7 +121,7 @@ img {
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 0.5rem; /* Space between items */
   margin: 0 0 0 1rem; /* Adjust left margin */
-  font-size: 0.9rem;
+  font-size: 0.9rem; /* Consistent font size */
   align-items: start; /* Align items to the start of each grid cell */
 }
 
@@ -141,8 +139,7 @@ img {
 /* Media Query for Tablets */
 @media (max-width: 768px) {
   html {
-    font-size: 1.4rem; /* Adjust base font size for tablets */
-  }
+    font-size: 1.
 
   nav {
     flex-direction: column; /* Stack navigation items */
@@ -200,12 +197,17 @@ img {
 
 @media (max-width: 480px) {
   html {
-    font-size: 1rem; /* Further reduce base font size for small devices */
+    font-size: 1rem; /* Adjust base font size for tablets */
+  }
+
+  main{
+    font-size: 0.9rem;
   }
 
   .container {
     width: 100%; /* Full width for containers */
     padding: 0; /* Remove padding */
+    
   }
 
   .translation-container {
