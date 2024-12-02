@@ -238,6 +238,7 @@ img{
       font-size: 0.6875rem; /* Adjust font size */
       margin-top: 1rem; /* Adjust margin */
       padding: 0 0 0 1rem; /* Add padding */
+ 
   }
 
   .list {
@@ -265,21 +266,25 @@ img{
       font-size: 0.6rem; /* Adjust font size */
       margin-top: 0.3rem; /* Adjust margin */
       padding: 0 0 0 1rem; /* Add padding */
+     
   }
 
   .list {
-    font-size: 0.6rem; /* Adjust font size */
-    overflow: visible;
+    font-size: 0.6rem;  /* Adjust font size */
+    overflow: visible; 
+    padding: 0 0 0 1rem;
 }
 .list ul {
     padding: 0;
     margin: 0 0 0 1rem;;
     list-style-type: none; /* Remove bullets if needed */
+    font-size: 0.6rem;
 }
 .list a {
     display: block; /* Ensure links are block-level for vertical stacking */
     text-decoration: none;
     color: inherit; /* Inherit text color */
+    font-size: 0.6rem;
 }
   .grid-item {
       width: 100%; /* Full width for grid items */
