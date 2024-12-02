@@ -115,24 +115,36 @@ img {
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0 0 0 1rem;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 0.5rem; /* Space between items */
+  margin: 0 0 0 1rem; /* Adjust left margin */
   font-size: 0.9rem;
-  gap: 0.5rem;
+  align-items: start; /* Align items to the start of each grid cell */
 }
 
 .list li {
-  margin-bottom: 0.5rem;
+  list-style-type: none; /* Remove bullet points */
+  margin-bottom: 0.5rem; /* Space between items */
+}
+
+.list a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+  display: block; /* Make the link a block-level element for easy click targets */
+  padding: 0.5rem; /* Add padding around links */
+  border-radius: 0.25rem; /* Slight rounding of corners */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .list a:hover {
-  color: grey;
+  color: grey; /* Change color on hover */
 }
 
 .C01, .C02 {
   padding: 0.625rem 0 0 0;
 }
 
+/* Media Query for Tablets and Smaller Devices */
 @media (max-width: 768px) {
   html {
     font-size: 1.4rem;
@@ -199,6 +211,7 @@ img {
   }
 }
 
+/* Media Query for Small Mobile Devices */
 @media (max-width: 320px) {
   html {
     font-size: 1rem;
@@ -240,3 +253,4 @@ img {
     width: 100%;
   }
 }
+
