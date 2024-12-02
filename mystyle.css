@@ -195,7 +195,7 @@ img {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   html {
     font-size: 1rem; /* Adjust base font size for tablets */
   }
