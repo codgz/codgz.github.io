@@ -101,7 +101,6 @@ nav a {
 }
 
 .english {
-  font-style: italic;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -212,14 +211,11 @@ img {
   .translation-container {
     width: 100%; /* Full width for translation container */
     line-height: 1.2rem; /* Adjust line height */
-    font-size: 0.75rem; /* Further reduce font size */
     margin-top: 0.5rem; /* Adjust margin */
     padding-left: 1rem;
   }
 
   .list {
-    font-size: 0.75rem; /* Adjust font size */
-    overflow: visible; /* Allow overflow */
     padding-left: 1rem; /* Adjust padding */
   }
 
@@ -232,14 +228,6 @@ img {
     display: block; /* Ensure links are block elements */
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit color */
-    font-size: 0.75rem; /* Adjust font size */
-  }
 
-  h1 {
-    font-size: 1.5rem; /* Reduce heading size */
-  }
-
-  .hamburger {
-    font-size: 1.5rem; /* Adjust size of hamburger icon */
   }
 }
