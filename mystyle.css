@@ -252,7 +252,7 @@ img{
 @media (max-width: 320px) {
   html {
     font-size: 1rem; 
-
+    width: 100%;
   }
 
   .container {
@@ -275,18 +275,17 @@ img{
     padding: 0 0 0 1rem;
 }
 .list ul {
-    padding: 0;
-    margin: 0 0 0 1rem;;
-    list-style-type: none; /* Remove bullets if needed */
+    margin: 0 0 0 1rem;
+    list-style-type: none; 
     font-size: 0.6rem;
 }
 .list a {
     display: block; /* Ensure links are block-level for vertical stacking */
     text-decoration: none;
-    color: inherit; /* Inherit text color */
+    color: inherit;
     font-size: 0.6rem;
 }
   .grid-item {
-      width: 100%; /* Full width for grid items */
+      width: 100%; 
   }
 }
