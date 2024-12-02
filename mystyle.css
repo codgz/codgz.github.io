@@ -157,7 +157,6 @@ img {
     position: absolute;
     top: 3.75rem;
     right: 0;
-    background-color: #fff;
     border: 0.0625rem solid black;
     z-index: 1000;
     width: 100%;
@@ -201,7 +200,7 @@ img {
   }
 
   main{
-    font-size: 0.9rem;
+    font-size: 0.875rem; 
   }
 
   .container {
