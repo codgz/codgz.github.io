@@ -82,7 +82,9 @@ body{
     text-transform: lowercase;
   
   }
-  
+  .hamburger{
+    display: none;
+  }
   nav a {
     margin-left: 2vw;
     border-radius: 30px;
