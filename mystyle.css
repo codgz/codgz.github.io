@@ -221,14 +221,15 @@ img {
   }
 
   .list ul {
-    margin-left: 1rem; /* Adjust margin */
+    margin-left: 5rem; /* Adjust margin */
     list-style-type: none; /* Remove bullet points */
+
   }
 
   .list a {
     display: block; /* Ensure links are block elements */
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit color */
-
+    margin-left: 5rem; 
   }
 }
