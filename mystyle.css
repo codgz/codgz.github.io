@@ -157,9 +157,9 @@ img {
     position: absolute;
     top: 3.75rem;
     right: 0;
-    border: 0.0625rem solid black;
     z-index: 1000;
     width: 100%;
+    background-color: white;
   }
 
   .nav-links.active {
@@ -200,7 +200,7 @@ img {
   }
 
   main{
-    font-size: 0.875rem; 
+    font-size: 0.875rem; /* Adjust font size */
   }
 
   .container {

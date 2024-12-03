@@ -38,21 +38,34 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+ 
+                
+         .list ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;           /* Optional: Removes default padding */
+            margin: 0;            /* Optional: Removes default margin */
+                }
+        
+
+
     </style>
 </head>
 <body>
     <nav>
-        <a href="../index.html"> collection </a>
-        <a href="../images/index.html"> images </a>
-        <a href="../about/index.html"> about </a>
-        <button id="toggleLanguage">Switch to French</button>
+       
+        <div class="nav-links" id="nav-links">
+            <a href="../index.html">Collection</a>
+            <a href="/images/index.html">Images</a>
+            <a href="about/index.html">About</a>
+        </div>
     </nav>
     
     <h1>Be Kind, a simple powerful reminder</h1>
 
     <main>
         <div class="grid">
-            <img src="Be-kind.jpg" class="img1" id="mainImage" style="cursor:pointer;"/>
+            <img src="Be-kind.png" class="img1" id="mainImage" style="cursor:pointer;"/>
             <div class="position">
                 <a href="https://www.google.com/maps/place/40°44'09.2%22N+74°00'21.7%22W/@40.73588,-74.0086149,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.73588!4d-74.00604?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"> 
                     <p>> 40.73588° N, 74.00604° W</p>
@@ -116,6 +129,8 @@
                 modal.style.display = 'none';
             }
         });
+
+              
     </script>
 </body>
 </html>

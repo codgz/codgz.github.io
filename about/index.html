@@ -27,11 +27,15 @@
                                     <!--<script src="" async defer></script>-->
 <div class="abstract-shape"></div>
         
-        <nav>
-            <a href="../index.html"> collection </a>
-            <a href="../images/index.html"> images </a>
-            <a href="../about/index.html"> about </a>
-        </nav>
+<nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+        <a href="../index.html">Collection</a>
+        <a href="index.html">Images</a>
+        <a href="about/index.html">About</a>
+    </div>
+</nav>
+
         
         
               <h1> New York's Messages </h1>
@@ -49,6 +53,7 @@
                 Each text is written from the inspiration and interpretation of the message. Whether straight to the point, a reminder or even a lesson. 
                 </span>
                 <br> 
+                <br> 
                 <span class="french"> New York's Messages est une collection de messages trouvés dans la ville. Elle rassemble les déclarations que la ville fait au grand public. Des messages gentils, drôles ou même provocateurs. 
 
                     La collection est organisée par page, chaque message ayant sa propre photo et son propre texte, le tout sur une seule page web. 
@@ -57,22 +62,32 @@
                 </span>
             </p>
 
-             
+ 
               
-              
-
+            <style>
+                
+                .list ul {
+                  list-style-type: none; /* Removes bullet points */
+                  padding: 0;           /* Optional: Removes default padding */
+                  margin: 0;            /* Optional: Removes default margin */
+                }
+              </style>
             
          
             
             
         </main>
        
-
-        <footer> 
-            
-            
-        </footer> 
-
+        <script>
+            document.getElementById("hamburger").addEventListener("click", function() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+    });
+    
+    document.getElementById("nav-links").classList
+    
+    
+           </script>
         
     </body>
 </html>

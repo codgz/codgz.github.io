@@ -146,13 +146,98 @@ img{
 
 
 
-@media screen and (max-width:320px){
-  img{
-    width: 80%;
-    max-width: 100%;
+@media (max-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+  nav {
+    flex-direction: column; /* Stack navigation items */
+    align-items: flex-start;
+    margin: 1rem;
   }
 
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 3.75rem;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  nav a {
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1 {
+    margin-left: 1rem; /* Adjust margin for heading */
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .translation-container {
+    display: block; /* Stack translation containers */
+    font-size: 0.875rem; /* Adjust font size */
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .list {
+    display: block; /* Stack list items */
+    font-size: 0.875rem; /* Adjust font size */
+    gap: 0.5rem;
+  }
+}
 
 
+@media (max-width: 320px) {
+  html {
+    font-size: 1rem; /* Adjust base font size for tablets */
+  }
 
+  main{
+    font-size: 0.875rem; /* Adjust font size */
+  }
+
+  .container {
+    width: 100%; /* Full width for containers */
+    padding: 0; /* Remove padding */
+    
+  }
+
+  .translation-container {
+    width: 100%; /* Full width for translation container */
+    line-height: 1.2rem; /* Adjust line height */
+    margin-top: 0.5rem; /* Adjust margin */
+    padding-left: 1rem;
+  }
+
+  .list {
+    padding-left: 1rem; /* Adjust padding */
+  }
+
+  .list ul {
+    margin-left: 1rem; /* Adjust margin */
+    list-style-type: none; /* Remove bullet points */
+  }
+
+  .list a {
+    display: block; /* Ensure links are block elements */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+
+  }
 }

@@ -1,3 +1,7 @@
+html {
+  font-size: 16px; /* Base font size 16px for easier scaling */
+}
+
 body{
   background-color: rgb(255, 255, 255);
     color: black;
@@ -24,18 +28,24 @@ body{
   nav {
     display: flex;
     justify-content: flex-end;
-    margin: 3vw 2vw 0vw 0vw;
+    margin: 1.92rem 1.28rem 0 0; 
     text-transform: lowercase;
-  
   }
   
+  
+  .hamburger {
+    display: none; 
+  }
+
+
   nav a {
-    margin-left: 2vw;
-    border-radius: 30px;
-    border: 1px solid black; 
-    padding: 10px 15px 10px 15px;
-    font-size: 9pt;
+    margin-left: 1.28rem; /* Conversion de 2vw */
+    border-radius: 1.875rem; /* Conversion de 30px */
+    border: 1px solid black;
+    padding: 0.625rem 0.9375rem 0.625rem 0.9375rem; /* Conversion des paddings */
+    font-size: 0.75rem; /* Conversion de 9pt */
   }
+  
 
   img {
     align-content: center;
@@ -46,13 +56,14 @@ body{
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(5, 1fr);   
-  gap: 15px;
-  width: 100vw;  
-  height: 100vw; 
-  margin: 2vw auto 0vw auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.9375rem; /* Conversion de 15px */
+  width: 62.5rem; /* Conversion de 100vw, en supposant une largeur de fenêtre standard */
+  height: 62.5rem; /* Conversion de 100vw */
+  margin: 1.25rem auto 0 auto; /* Conversion de 2vw et 0vw */
 }
+
 
 .grid img {
   width: 100%;   
@@ -61,7 +72,25 @@ body{
   aspect-ratio: 1 / 1; 
 }
 
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 0.5rem; /* Space between items */
+  margin: 0 0 0 1rem; /* Adjust left margin */
+  font-size: 0.9rem; /* Consistent font size */
+  align-items: start; /* Align items to the start of each grid cell */
+}
 
+.list li {
+  list-style-type: none; /* Remove bullet points */
+  margin-bottom: 0.5rem; /* Space between items */
+}
+
+.list a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+  display: block; /* Make the link a block-level element for easy click targets */
+}
 
 .img1 {
   grid-column: 1 / 2;
@@ -124,4 +153,105 @@ body{
 } 
 
 
+@media (max-width: 768px) {
+  html {
+    font-size: 1.
+  }
+  nav {
+    flex-direction: column; /* Stack navigation items */
+    align-items: flex-start;
+    margin: 1rem;
+  }
 
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 3.75rem;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  nav a {
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1 {
+    margin-left: 1rem; /* Adjust margin for heading */
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .translation-container {
+    display: block; /* Stack translation containers */
+    font-size: 0.875rem; /* Adjust font size */
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .list {
+    display: block; /* Stack list items */
+    font-size: 0.875rem; /* Adjust font size */
+    gap: 0.5rem;
+  }
+}
+
+.grid {
+  display: block; 
+  gap: 15px;
+  width: 100vw;  
+  height: 100vw; 
+  margin: 2vw auto 0vw auto;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 1rem; /* Adjust base font size for tablets */
+  }
+
+  main{
+    font-size: 0.875rem; /* Adjust font size */
+  }
+
+  .container {
+    width: 100%; /* Full width for containers */
+    padding: 0; /* Remove padding */
+    
+  }
+
+  .translation-container {
+    width: 100%; /* Full width for translation container */
+    line-height: 1.2rem; /* Adjust line height */
+    margin-top: 0.5rem; /* Adjust margin */
+    padding-left: 1rem;
+  }
+
+  .list {
+    padding-left: 1rem; /* Adjust padding */
+  }
+
+  .list ul {
+    margin-left: 1rem; /* Adjust margin */
+    list-style-type: none; /* Remove bullet points */
+  }
+
+  .list a {
+    display: block; /* Ensure links are block elements */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+
+  }
+}
