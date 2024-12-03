@@ -60,9 +60,10 @@ body{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0.9375rem; /* Conversion de 15px */
-  width: 62.5rem; /* Conversion de 100vw, en supposant une largeur de fenêtre standard */
+  width: 100%; /* Conversion de 100vw, en supposant une largeur de fenêtre standard */
   height: 62.5rem; /* Conversion de 100vw */
   margin: 1.25rem auto 0 auto; /* Conversion de 2vw et 0vw */
+
 }
 
 .grid img {
